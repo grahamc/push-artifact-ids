@@ -80,4 +80,4 @@ runs:
         SHA: ${{ steps.determination.outputs.sha }}
         NAME: ${{ steps.determination.outputs.name }}
       run: |
-        echo .github/workflows/upload_s3.sh "$ARTIFACTS_DIRECTORY" "$RELEASE_TYPE" "$GITHUB_REF_NAME" "$GITHUB_SHA"
+        echo $GITHUB_ACTION_PATH/upload_s3.sh "$ARTIFACTS_DIRECTORY" "$RELEASE_TYPE" "$GITHUB_REF_NAME" "$GITHUB_SHA"
